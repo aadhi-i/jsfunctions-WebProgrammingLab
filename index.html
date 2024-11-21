@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String and Math Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #000000;
+        }
+        h1, h2 {
+            color: #ffffff;
+        }
+        .p1 {
+            background-color: #5a5555;
+            padding: 20px;
+            border-radius: 5px;
+            color: #ffffff;
+            width: 620px;
+            font-family: 'Courier New';
+            float: left;
+            height: 300px;
+            margin-left: 30px;
+        }
+        .p2 {
+            background-color: #5a5555;
+            padding: 20px;
+            border-radius: 5px;
+            color: #ffffff;
+            width: 600px;
+            font-family: 'Courier New';
+            float: right;
+            height: 300px;
+            margin-right: 30px;
+
+        }
+        .out{
+            color:rgb(17, 255, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Predefined JavaScript Functions</h1><br>
+    
+    <div class="p1">
+        <h2>String Functions</h2>
+        <p id="string-functions"></p>
+    </div>
+    
+    <div class="p2">
+        <h2>Math Functions</h2>
+        <p id="math-functions"></p>
+    </div>
+
+    <script>
+        // String Functions
+        const exampleString = "Set your heart ablaze, Go beyond your limits!";
+        
+        const stringFunctions = `
+Original String : <span class="out">${exampleString}</span><br>
+Length : <span class="out">${exampleString.length}</span><br>
+To UpperCase : <span class="out">${exampleString.toUpperCase()}</span><br>
+To LowerCase : <span class="out">${exampleString.toLowerCase()}</span><br>
+Index of 'heart' : <span class="out">${exampleString.indexOf('heart')}</span><br>
+Substring (22) : <span class="out">${exampleString.substring(22)}</span><br>
+Replace 'ablaze' with 'on fire' : <span class="out">${exampleString.replace('ablaze', 'on fire')}</span>
+`;
+
+        document.getElementById('string-functions').innerHTML = stringFunctions;
+
+        // Math Functions
+        const mathFunctions = `
+Math.PI : <span class="out">${Math.PI}</span><br>
+Math.E : <span class="out">${Math.E}</span><br>
+Random Number (0-1) : <span class="out">${Math.random()}</span><br>
+Square Root of 564 : <span class="out">${Math.sqrt(564)}</span><br>
+3 to the power of 16 : <span class="out">${Math.pow(3, 16)}</span><br>
+Ceiling of 10.9 : <span class="out">${Math.ceil(10.9)}</span><br>
+Floor of 10.9 : <span class="out">${Math.floor(10.9)}</span>
+`;
+
+        document.getElementById('math-functions').innerHTML = mathFunctions;
+    </script>
+</body>
+</html>
